@@ -7,20 +7,22 @@ from computeHB import computeHeartBeat
 from detectWavePeaksT import detectWavePeaksT
 
 # Load data
-ecg = wfdb.rdrecord('e0104')
+ecg = wfdb.rdrecord('e0114')
 print(ecg.sig_name)
 print(ecg.record_name)
 print(ecg.units)
 print(ecg.fs)
 
 # parametri zajema
-signal = 1
+signal = 1 #V4
 zac_cas = 0
-nr_of_sec = 10
+nr_of_sec = 8
 
 # izbira podatkov
 ecg_s = np.array(ecg.p_signal)[zac_cas * ecg.fs : zac_cas * ecg.fs + ecg.fs * nr_of_sec]
+print(ecg_s)
 ecg_s = ecg_s[:,signal]
+print(ecg_s)
 ecg_t = np.arange(zac_cas, nr_of_sec, 1/ecg.fs)
 
 
@@ -32,14 +34,19 @@ plt.plot(ecg_t,ecg_s)
 iQ, iR, iS = detectWavePeaksQRS(ecg_s)
 iP = detectWavePeaks(ecg_s, iQ, iS )
 iT = detectWavePeaksT(ecg_s, iQ, iS)
+
+#plot vrhov
 plt.plot(ecg_t[iR], ecg_s[iR], 'o', color='green', linewidth=2, markersize=5)
 plt.plot(ecg_t[iQ], ecg_s[iQ], 'o', color='red', linewidth=2, markersize=5)
 plt.plot(ecg_t[iS], ecg_s[iS], 'o', color='blue', linewidth=2, markersize=5)
 plt.plot(ecg_t[iP], ecg_s[iP], 'o', color='cyan', linewidth=2, markersize=5)
 plt.plot(ecg_t[iT], ecg_s[iT], 'o', color='yellow', linewidth=2, markersize=5)
+
+
+
 plt.title('EKG')
 plt.xlabel('Čas [s]')
-plt.ylabel('Vrednost')
+plt.ylabel('Napetost [mV]')
 
 
 QHBavg, QHBstd, QHFavg, QHFstd = computeHeartBeat(ecg_t[iQ], ecg_s[iQ])
@@ -54,7 +61,11 @@ print("Tocka S - Povprecna perioda ", SHBavg, "s, stadardna deviacija: ", SHBstd
 PHBavg, PHBstd, PHFavg, PHFstd = computeHeartBeat(ecg_t[iP], ecg_s[iP])
 print("Tocka P - Povprecna perioda ", PHBavg, "s, stadardna deviacija: ", PHBstd, "s. Povprecna frekenca :", PHFavg, "Hz, standardna deviacija: ", PHFstd, "Hz.")
 
-
+print("Udarci na minuto: ")
+print("Tocka Q : ", QHFavg*60, "BPM, STD: ", QHFstd*60, "BPM")
+print("Tocka R : ", RHFavg*60, "BPM, STD: ", RHFstd*60, "BPM")
+print("Tocka S : ", SHFavg*60, "BPM, STD: ", round(SHFstd*60,3), "BPM")
+print("Tocka P : ", PHFavg*60, "BPM, STD: ", PHFstd*60, "BPM")
 
 
 plt.show()
