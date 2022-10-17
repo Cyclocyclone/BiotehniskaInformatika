@@ -16,7 +16,7 @@ print(ecg.fs)
 # parametri zajema
 signal = 1
 zac_cas = 0
-nr_of_sec = 5
+nr_of_sec = 10
 
 # izbira podatkov
 ecg_s = np.array(ecg.p_signal)[zac_cas * ecg.fs : zac_cas * ecg.fs + ecg.fs * nr_of_sec]

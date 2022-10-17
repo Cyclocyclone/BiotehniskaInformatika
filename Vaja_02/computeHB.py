@@ -16,9 +16,6 @@ def computeHeartBeat(iTime, iIdx):
     oHBstd = np.round(np.std(Times), 3)
     oHFavg = np.round(1/np.average(Times), 3)
     oHFstdvred = 1/np.array(Times)
-    
-    print(oHFstdvred)
     oHFstd = np.round(np.std(oHFstdvred), 3)
-    #oHFstd čudne vrednosti!
-
+ 
     return oHBavg, oHBstd, oHFavg, oHFstd   
