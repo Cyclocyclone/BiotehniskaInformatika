@@ -15,14 +15,12 @@ def getDicomTagName(iTag):
     iGroupn = dcmGroups[:,0]
     for i in range(np.size(iGroupn)-1):
         if iTagG == iGroupn[i]:
-            oGroupName = dcmGroups[1, i]
-        i += 1
+            oGroupName = dcmGroups[i, 1]
 
     iElements = dcmElements[:,0]
-    print(iElements)
+
     for n in range(np.size(iElements)-1):
         if iTag in iElements[n]:
             oElementName = dcmElements[n, 1]
-        n += 1
 
     return oGroupName, oElementName 
