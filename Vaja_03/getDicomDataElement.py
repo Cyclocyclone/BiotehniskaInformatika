@@ -25,7 +25,7 @@ def getDicomDataElement (iData, iTag):
     oElement['VL'] = iData[i+6]*(256**0)+iData[i+7]*(256**1)
     oElement['value'] = iData[i+8:i+8+oElement['VL']]
     oElement['value'] = convertDicomValue(oElement['value'], oElement['VR'])
-    oElement['group'], oElement['element'] = getDicomDataElement(iTag)
+    oElement['group'], oElement['element'] = getDicomTagName(iTag)
 
 
     return oElement
