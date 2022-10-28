@@ -2,7 +2,7 @@ from getDicomDataElement import getDicomDataElement
 import numpy as np
 import matplotlib.pyplot as plt
 
-def displayDicomImage(iData):
+def displayDicomImage(iData, iName):
 
     # pridobi podatke
     dcmRows = getDicomDataElement(iData, '0028,0010')
@@ -48,6 +48,7 @@ def displayDicomImage(iData):
     wI[idx] = (wI[idx] - (wCenter - wWidth/2))*255/wWidth;    
     # prikazi sliko
     plt.figure()
+    plt.title(iName)
     plt.imshow(wI)
     plt.show()
     #figure('Name', 'DICOM slika', 'Color', [1 1 1]);

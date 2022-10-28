@@ -7,7 +7,7 @@ import numpy as np
 
 
 #------------
-path = 'imageXY.dcm'
+path = 'image11.dcm'
 dcmData = np.array(loadDicomFile(path))
 #-----------
 # image date
@@ -25,4 +25,4 @@ print(dcmImagePatientName)
 print(dcmImageRows)
 print(dcmImageWindowWidth)
 
-displayDicomImage(dcmData)
+displayDicomImage(dcmData,path)
