@@ -1,0 +1,7 @@
+{'idx': 584, 'teg': '0008,0023', 'VR': 'DA', 'VL': 8, 'value': '20120516', 'group': 'Study Information', 'element': "'Image Date'"}
+{'idx': 666, 'teg': '0008,0033', 'VR': 'TM', 'VL': 14, 'value': '172932.609000 ', 'group': 'Study Information', 'element': "'Image Time'"}
+{'idx': 1414, 'teg': '0010,0010', 'VR': 'PN', 'VL': 12, 'value': 'Ime Priimek\x00', 'group': 'Patient Information', 'element': "'Patient''s Name'"} 
+{'idx': 1534, 'teg': '0010,1010', 'VR': 'AS', 'VL': 4, 'value': '052Y', 'group': 'Patient Information', 'element': "'Patient''s Age'"}
+{'idx': 2602, 'teg': '0028,0010', 'VR': 'US', 'VL': 2, 'value': 512, 'group': 'Image Information', 'element': "'Rows'"}
+{'idx': 2726, 'teg': '0028,1051', 'VR': 'DS', 'VL': 4, 'value': '690 ', 'group': 'Image Information', 'element': "'Window Width'"}
+{'idx': 600, 'teg': '0008,0030', 'VR': 'TM', 'VL': 14, 'value': '170532.015000 ', 'group': 'Study Information', 'element': "'Study Time'"}
