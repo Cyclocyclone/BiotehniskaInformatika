@@ -19,7 +19,7 @@ dcmImagePatientsAge = getDicomDataElement(dcmData, '0010,1010')
 dcmImageRows = getDicomDataElement(dcmData, '0028,0010')
 dcmImageWindowWidth = getDicomDataElement(dcmData, '0028,1051')
 
-dcmImageStudyTime = getDicomDataElement(dcmData, '0008,0030')
+#dcmImageStudyTime = getDicomDataElement(dcmData, '0032,1060')
 
 
 print(dcmImageDate)
@@ -29,6 +29,6 @@ print(dcmImagePatientsAge)
 print(dcmImageRows)
 print(dcmImageWindowWidth)
 
-print(dcmImageStudyTime)
+#print(dcmImageStudyTime)
 
 displayDicomImage(dcmData,path)
