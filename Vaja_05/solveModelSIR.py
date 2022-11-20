@@ -15,4 +15,6 @@ def solveModelSIR(iTime, iModel, iParam):
 
     rep_stevilo = iParam[0]/iParam[1]
     maxN = np.argmax(oModel[:,1])
+    #hipo = [oModel[10,0]+oModel[10,1]+oModel[10,2]]
+    #print(hipo)
     return oModel, [rep_stevilo, maxN]
