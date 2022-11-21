@@ -1,0 +1,76 @@
+<patient>
+    <id type="number">6652846378</id>
+    <name>
+        <first type="string">Janez</first>
+        <middle type="string"></middle>
+        <last type="string">Novak</last>
+    </name>    
+    <dateOfBirth>
+        <dd type="number">16</dd>
+        <mm type="number">05</mm>
+        <yyyy type="number">1974</yyyy>
+    </dateOfBirth>
+    <address>
+        <street type="string">Glavna ulica 1</street>
+        <zip type="number">4000</zip>
+        <city type="string">Kranj</city>
+        <country type="string">Slovenija</country>
+    </address>
+    <phone type="string">(04) 353 2761</phone>
+</patient>
+<visits>
+	<visit1>
+        <institution>
+            <name type="string">Zdravstveni dom Ljubljana</name>
+            <department type="string">Enota Vic-Rudnik</department>
+            <address>
+                <street type="string">Sestova ulica 10</street>
+                <zip type="number">1000</zip>
+                <city type="string">Ljubljana</city>
+                <country type="string">Slovenija</country>
+            </address>
+            <phone type="string">(01) 2004 500</phone>
+            <fax type="string">(01) 4261 869</fax>
+            <email type="string">taj.vic@zd-lj.si</email>
+        </institution>
+        <dateOfAdmission>
+            <dd type="number">16</dd>
+            <mm type="number">06</mm>
+            <yyyy type="number">2012</yyyy>
+        </dateOfAdmission>
+        <timeOfAdmission>
+            <hh type="number">08</hh>
+            <mm type="number">32</mm>
+            <ss type="number">14</ss>
+        </timeOfAdmission>
+        <referredClinician>
+            <id type="number">00345</id>
+            <name>
+                <first type="string">Marija</first>
+                <middle type="string"></middle>
+                <last type="string">Zdravje</last>
+            </name>
+        </referredClinician>
+        <diagnosis>
+            <description>Pljucni edem</description>
+        </diagnosis>
+    </visit1>
+</visits>
+<medications>
+    <medication1>
+        <name type="string">Edemid</name>
+        <fullname type="string">Edemid 40 mg tablete</fullname>
+        <usage type="string">1 tableta vsakih 12 ur</usage>
+        <code type="number">026778</code>
+        <dateOfPrescription>
+            <dd type="number">15</dd>
+            <mm type="number">06</mm>
+            <yyyy type="number">2012</yyyy>
+        </dateOfPrescription>
+        <dateOfExpiration>
+            <dd type="number">06</dd>
+            <mm type="number">07</mm>
+            <yyyy type="number">2012</yyyy>
+        </dateOfExpiration>
+    </medication1>
+</medications>
