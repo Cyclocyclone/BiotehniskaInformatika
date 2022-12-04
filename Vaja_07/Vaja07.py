@@ -8,6 +8,7 @@ def displayImage(iImage,iName = 'GeneralName'):
     plt.figure()
     plt.imshow(iImage, cmap=plt.cm.gray)
     plt.title(iName)
+    plt.savefig(iName, format="png")
     plt.show()
 
 img = nib.load("lung_001.nii.gz")
